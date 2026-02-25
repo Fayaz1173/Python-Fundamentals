@@ -10,7 +10,7 @@ Python has several built-in data types. The most commonly used are:
 
 ---
 
-## 1️⃣ Strings (`str`)
+## 1️ Strings (`str`)
 
 ### ➤ Definition
 
@@ -47,7 +47,7 @@ text.replace("h","H")# 'Hello'
 
 ---
 
-## 2️⃣ Lists (`list`)
+## 2️ Lists (`list`)
 
 ### ➤ Definition
 
@@ -92,7 +92,7 @@ numbers.pop()
 
 ---
 
-## 3️⃣ Tuples (`tuple`)
+## 3️ Tuples (`tuple`)
 
 ### ➤ Definition
 
@@ -126,7 +126,7 @@ print(coordinates[0])# 10
 
 ---
 
-## 4️⃣ Dictionaries (`dict`)
+## 4️ Dictionaries (`dict`)
 
 ### ➤ Definition
 
@@ -171,7 +171,7 @@ student.pop("age")
 
 ---
 
-## 5️⃣ Sets (`set`)
+## 5️ Sets (`set`)
 
 ### ➤ Definition
 
