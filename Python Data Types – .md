@@ -1,102 +1,92 @@
-## Python Data Types – 
+# Python Data Types
 
-In Python, **data types** define the kind of value a variable can store. The main built-in data types you need to understand are:
+Python has several built-in data types. The most commonly used are:
 
-- **Strings**
-- **Lists**
-- **Tuples**
-- **Dictionaries**
+- Strings
+- Lists
+- Tuples
+- Dictionaries
+- Sets
 
 ---
 
 ## 1️⃣ Strings (`str`)
 
-A **string** is a sequence of characters enclosed in quotes.
+### ➤ Definition
+
+A string is a sequence of characters enclosed in quotes.
 
 ```
 name="Python"
 message='Hello World'
 ```
 
-### 🔹 Key Properties
+### ➤ Key Features
 
-- Ordered (characters have positions/index)
+- Ordered (characters have index positions)
 - Immutable (cannot change individual characters)
-- Indexed (starts from 0)
+- Allow duplicates
 
-### 🔹 Accessing Characters
-
-```
-text="Python"
-print(text[0])# P
-print(text[-1])# n
-```
-
-### 🔹 Common String Methods
+### ➤ Accessing Characters
 
 ```
-text.lower()# convert to lowercase
-text.upper()# convert to uppercase
-text.startswith("P")# True
-text.endswith("n")# True
-text.replace("P","J")
+word="Cyber"
+print(word[0])# C
+print(word[-1])# r
 ```
 
-### 🔹 String Concatenation
+### ➤ Common Methods
 
 ```
-first="Hello"
-second="World"
-print(first+" "+second)
+text="hello"
+text.upper()# 'HELLO'
+text.lower()# 'hello'
+text.startswith("h")# True
+text.replace("h","H")# 'Hello'
 ```
 
 ---
 
 ## 2️⃣ Lists (`list`)
 
-A **list** is a collection of items stored in square brackets `[]`.
+### ➤ Definition
+
+A list is a collection of items stored in square brackets.
 
 ```
 numbers= [1,2,3,4]
 names= ["Alice","Bob","Charlie"]
 ```
 
-### 🔹 Key Properties
+### ➤ Key Features
 
 - Ordered
-- Mutable (can be changed)
-- Allows duplicate values
-- Can store mixed data types
+- Mutable (can change items)
+- Allow duplicates
+- Can store different data types
 
 ```
-mixed= [1,"Python",3.5]
+mixed= [10,"Python",3.5]
 ```
 
-### 🔹 Accessing Elements
+### ➤ Accessing Elements
 
 ```
 print(numbers[0])# 1
-print(numbers[-1])# 4
 ```
 
-### 🔹 Modifying List
+### ➤ Modifying List
 
 ```
-numbers[0]=10
-print(numbers)
+numbers[1]=20
 ```
 
-### 🔹 Adding Elements
+### ➤ Common Methods
 
 ```
-numbers.append(5)# add at end
-numbers.insert(1,20)# insert at index 1
-```
-
-### 🔹 Removing Elements
-
-```
-numbers.remove(20)
+numbers.append(5)
+numbers.insert(1,100)
+numbers.remove(3)
 numbers.pop()
 ```
 
@@ -104,81 +94,131 @@ numbers.pop()
 
 ## 3️⃣ Tuples (`tuple`)
 
-A **tuple** is similar to a list but uses parentheses `()`.
+### ➤ Definition
+
+A tuple is similar to a list but uses parentheses.
 
 ```
 coordinates= (10,20)
 ```
 
-### 🔹 Key Properties
+### ➤ Key Features
 
 - Ordered
-- Immutable (cannot change after creation)
-- Allows duplicates
-
-### 🔹 Accessing Elements
+- Immutable (cannot change values)
+- Allow duplicates
 
 ```
-print(coordinates[0])
+data= (1,2,2,3)
 ```
 
-### 🔹 Why Use Tuple?
+### ➤ Accessing Elements
 
-- Faster than list
+```
+print(coordinates[0])# 10
+```
+
+### ➤ Why Use Tuples?
+
+- Faster than lists
 - Used when data should not change
-- Good for fixed data (e.g., coordinates, days of week)
-
-```
-days= ("Mon","Tue","Wed")
-```
+- Useful for fixed values like coordinates
 
 ---
 
 ## 4️⃣ Dictionaries (`dict`)
 
-A **dictionary** stores data in **key-value pairs** using curly braces `{}`.
+### ➤ Definition
+
+A dictionary stores data in key-value pairs using curly braces.
 
 ```
 student= {
 "name":"John",
-"age":21,
+"age":22,
 "course":"Cybersecurity"
 }
 ```
 
-### 🔹 Key Properties
+### ➤ Key Features
 
 - Unordered (Python 3.7+ maintains insertion order, but conceptually key-based)
 - Mutable
 - Keys must be unique
-- Accessed using keys (not index)
+- Values can be duplicated
 
-### 🔹 Accessing Values
-
-```
-print(student["name"])
-```
-
-### 🔹 Adding / Updating
+### ➤ Accessing Values
 
 ```
-student["age"]=22
+print(student["name"])# John
+```
+
+### ➤ Modifying Dictionary
+
+```
+student["age"]=23
 student["grade"]="A"
 ```
 
-### 🔹 Removing
+### ➤ Common Methods
 
 ```
-student.pop("course")
+student.keys()
+student.values()
+student.items()
+student.pop("age")
 ```
 
 ---
 
-# 🔎 Quick Comparison Table
+## 5️⃣ Sets (`set`)
 
-| Feature | String | List | Tuple | Dictionary |
+### ➤ Definition
+
+A set is a collection of unique elements enclosed in curly braces.
+
+```
+numbers= {1,2,3,4}
+```
+
+### ➤ Key Features
+
+- Unordered
+- Mutable
+- Do NOT allow duplicates
+- No indexing
+
+```
+data= {1,2,2,3}
+print(data)# {1, 2, 3}
+```
+
+### ➤ Common Methods
+
+```
+numbers.add(5)
+numbers.remove(2)
+```
+
+### ➤ Set Operations
+
+```
+a= {1,2,3}
+b= {3,4,5}
+
+print(a.union(b))# {1,2,3,4,5}
+print(a.intersection(b))# {3}
+print(a.difference(b))# {1,2}
+```
+
+---
+
+# Quick Comparison Table
+
+| Data Type | Ordered | Mutable | Duplicates Allowed | Syntax |
 | --- | --- | --- | --- | --- |
-| Ordered | ✅ | ✅ | ✅ | ✅ (3.7+) |
-| Mutable | ❌ | ✅ | ❌ | ✅ |
-| Indexed | ✅ | ✅ | ✅ | ❌ (key-based) |
-| Duplicates | ✅ | ✅ | ✅ | Keys ❌, Values ✅ |
+| String | Yes | No | Yes | `" "` |
+| List | Yes | Yes | Yes | `[ ]` |
+| Tuple | Yes | No | Yes | `( )` |
+| Dictionary | Key-based | Yes | Keys ❌ Values ✅ | `{key:value}` |
+| Set | No | Yes | No | `{ }` |
