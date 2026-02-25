@@ -74,3 +74,103 @@ Enter a number: 5
 5 x 9 = 45
 5 x 10 = 50
 ```
+
+# Applying Loops and Conditions Together
+
+1. Print Even and Odd Numbers from 1 to N
+
+input:
+
+```python
+n = int(input("Enter a number: "))
+
+i = 1
+
+while i <= n:
+    if i % 2 == 0:
+        print(i, "is Even")
+    else:
+        print(i, "is Odd")
+    i += 1
+```
+
+output:
+
+```python
+Enter a number: 5
+1 is Odd
+2 is Even
+3 is Odd
+4 is Even
+5 is Odd
+```
+
+1. Count Positive and Negative Numbers in a List
+
+input:
+
+```python
+numbers = [10, -5, 7, -2, 0, 15, -8]
+
+positive = 0
+negative = 0
+
+for num in numbers:
+    if num > 0:
+        positive += 1
+    elif num < 0:
+        negative += 1
+
+print("Positive numbers:", positive)
+print("Negative numbers:", negative)
+```
+
+output:
+
+```python
+Positive numbers: 3
+Negative numbers: 3
+```
+
+1.  Find the Largest Number in a List
+
+input:
+
+```python
+numbers = [45, 12, 78, 34, 89, 23]
+
+largest = numbers[0]
+
+for num in numbers:
+    if num > largest:
+        largest = num
+
+print("Largest number is:", largest)
+```
+
+output:
+
+```python
+Largest number is: 89
+```
+
+1. Print Multiples of 3 Between 1 and 20
+
+input:
+
+```python
+for i in range(1, 21):
+    if i % 3 == 0:
+        print(i)
+```
+
+output:
+
+```python
+3
+6
+9
+12
+15
+18
+```
