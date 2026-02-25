@@ -1,4 +1,4 @@
-# Python Data Types
+## Python Data Types
 
 Python has several built-in data types. The most commonly used are:
 
